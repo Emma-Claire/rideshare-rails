@@ -2,12 +2,8 @@ require 'csv'
 
 class DriversController < ApplicationController
 
- def index
-  csv_text = File.read('../support/drivers.csv')
-  csv = CSV.parse(csv_text, :headers => true)
-    csv.each do |row|
-      Driver.create!(row.to_hash)
-    end
+  def index
+
   end
 
   def new
@@ -15,8 +11,14 @@ class DriversController < ApplicationController
   end
 
   def create
-    @driver = Driver.new
-    # fill out create method
+    driver = Driver.new[user_params]
+    driver.save
+    redirect_to drivers_path
+  end
+
+  private
+  def user_params
+    params.require(:driver).permit(:driver_id, :name, :vin)
   end
 
 end
