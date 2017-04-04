@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  trip_id: 1
+  driver_id: 1
+  rider_id: 1
+  date: 2017-04-04
+  rating: 1
+
+two:
+  trip_id: 1
+  driver_id: 1
+  rider_id: 1
+  date: 2017-04-04
+  rating: 1
