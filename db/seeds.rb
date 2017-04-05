@@ -17,3 +17,27 @@ csv.each do |row|
   driver.vin = row['vin']
   driver.save
 end
+
+passenger_data = File.read(Rails.root.join('lib', 'seeds', 'passengers.csv'))
+
+passenger_csv = CSV.parse(passenger_data, :headers => true)
+passenger_csv.each do |row|
+  passenger = Passenger.new
+  passenger.rider_id = row['rider_id']
+  passenger.name = row['name']
+  passenger.phone_num = row['phone_num']
+  passenger.save
+end
+
+trip_data = File.read(Rails.root.join('lib', 'seeds', 'passengers.csv'))
+
+trip_csv = CSV.parse(trip_data, :headers => true)
+trip_csv.each do |row|
+  trip = trip.new
+  trip.trip_id = row['trip_id']
+  trip.driver_id = row['driver_id']
+  trip.rider_id = row['rider_id']
+  trip.date = row['date']
+  trip.rating = row['rating']
+  trip.save
+end

@@ -39,6 +39,8 @@ ActiveRecord::Schema.define(version: 20170405030358) do
     t.integer  "rating"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["driver_id"], name: "index_trips_on_driver_id", using: :btree
+   t.index ["passenger_id"], name: "index_trips_on_passenger_id", using: :btree
   end
 
 end
