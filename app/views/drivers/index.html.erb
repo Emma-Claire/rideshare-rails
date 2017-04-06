@@ -2,7 +2,12 @@
 
 <% @drivers.each do |driver| %>
 <%= link_to driver.id, driver_path(driver.id) %>
-  <%= "Driver ID: #{driver[:id]} Name: #{driver[:name]}"%> </br>
+<%= "Driver ID: #{driver[:id]} Name: #{driver[:name]}"%>
+<%= link_to "Edit", edit_driver_path(driver) %>
+<%= link_to "Delete", driver_path(driver), method: :delete, data: {confirm: "Are you sure?"} %>
+</br>
+
+
   <section>
 
   </section>
