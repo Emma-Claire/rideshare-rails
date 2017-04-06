@@ -6,6 +6,16 @@ class DriversController < ApplicationController
  @drivers = Driver.all
   end
 
+  def show
+    id = params[:id].to_i
+    @driver = Driver.find(id)
+  end
+
+  def edit
+    id = params[:id].to_i
+    @driver = Driver.find(id)
+  end
+
   def new
     @driver = Driver.new
   end

@@ -1,5 +1,9 @@
 <h1>Drivers' List</h1>
 
 <% @drivers.each do |driver| %>
-  <%= "Driver ID: #{driver[:id]} Name: #{driver[:name]}"%>
+<%= link_to driver.id, driver_path(driver.id) %>
+  <%= "Driver ID: #{driver[:id]} Name: #{driver[:name]}"%> </br>
+  <section>
+
+  </section>
 <% end %>
