@@ -29,15 +29,17 @@ passenger_csv.each do |row|
   passenger.save
 end
 
-trip_data = File.read(Rails.root.join('lib', 'seeds', 'passengers.csv'))
-
+trip_data = File.read(Rails.root.join('lib', 'seeds', 'trips.csv'))
+byebug
 trip_csv = CSV.parse(trip_data, :headers => true)
 trip_csv.each do |row|
-  trip = trip.new
+  byebug
+  trip = Trip.new
   trip.trip_id = row['trip_id']
   trip.driver_id = row['driver_id']
   trip.rider_id = row['rider_id']
   trip.date = row['date']
   trip.rating = row['rating']
+  byebug
   trip.save
 end
