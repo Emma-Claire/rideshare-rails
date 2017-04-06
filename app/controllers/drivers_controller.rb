@@ -2,6 +2,10 @@ require 'csv'
 
 class DriversController < ApplicationController
 
+  def new
+    @driver = Driver.new
+  end
+
   def index
     @drivers = Driver.all
   end
@@ -16,10 +20,6 @@ class DriversController < ApplicationController
     @driver = Driver.find(id)
   end
 
-  def new
-    @driver = Driver.new
-  end
-
   def update
     driver = Driver.find(params[:id])
     driver.update_attributes(user_params)
@@ -29,8 +29,8 @@ class DriversController < ApplicationController
   end
 
   def create
-    driver = Driver.new[user_params]
-    driver.save
+    Driver.create(user_params)
+    
     redirect_to drivers_path
   end
 

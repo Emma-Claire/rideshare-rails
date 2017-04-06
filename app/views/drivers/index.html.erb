@@ -1,14 +1,15 @@
 <h1>Drivers' List</h1>
+<button><%= link_to "add a new driver", new_driver_path %>
+</button>
 
-<% @drivers.each do |driver| %>
-<%= link_to driver.id, driver_path(driver.id) %>
-<%= "Driver ID: #{driver[:id]} Name: #{driver[:name]}"%>
-<%= link_to "Edit", edit_driver_path(driver) %>
-<%= link_to "Delete", driver_path(driver), method: :delete, data: {confirm: "Are you sure?"} %>
-</br>
-
-
-  <section>
-
-  </section>
+<section>
+  <% @drivers.each do |driver| %>
+  <%= link_to driver.id, driver_path(driver.id) %>
+  <%= "Driver ID: #{driver[:id]} Name: #{driver[:name]}"%>
+  <%= link_to "Edit", edit_driver_path(driver) %>
+  <%= link_to "Delete", driver_path(driver), method: :delete, data: {confirm: "Are you sure?"} %></br>
 <% end %>
+</section>
+
+</br><button><%= link_to "add a new driver", new_driver_path %>
+</button>
