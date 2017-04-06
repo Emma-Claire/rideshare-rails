@@ -36,7 +36,6 @@ ActiveRecord::Schema.define(version: 20170406050647) do
     t.integer  "rating"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    #missing index here
   end
 
 end
