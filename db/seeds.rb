@@ -6,6 +6,7 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 require 'csv'
+require 'date'
 
 csv_text = File.read(Rails.root.join('lib', 'seeds', 'drivers.csv'))
 
@@ -30,16 +31,13 @@ passenger_csv.each do |row|
 end
 
 trip_data = File.read(Rails.root.join('lib', 'seeds', 'trips.csv'))
-byebug
 trip_csv = CSV.parse(trip_data, :headers => true)
 trip_csv.each do |row|
-  byebug
   trip = Trip.new
   trip.trip_id = row['trip_id']
   trip.driver_id = row['driver_id']
   trip.rider_id = row['rider_id']
-  trip.date = row['date']
+  trip.date = Date.strptime(row['date'], '%Y-%m-%d')
   trip.rating = row['rating']
-  byebug
   trip.save
 end

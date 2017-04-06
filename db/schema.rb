@@ -35,7 +35,7 @@ ActiveRecord::Schema.define(version: 20170405030358) do
     t.integer  "trip_id"
     t.integer  "driver_id"
     t.integer  "rider_id"
-    t.date     "date"
+    t.date "date"
     t.integer  "rating"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
