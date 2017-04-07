@@ -21,8 +21,8 @@
     for="demo-menu-lower-left">
       <li class="mdl-menu__item"><%= link_to "Drivers", drivers_path %></li>
       <li class="mdl-menu__item mdl-menu__item--full-bleed-divider"><%= link_to "Passengers", passengers_path %></li>
-      <li class="mdl-menu__item">New Driver</li>
-      <li class="mdl-menu__item">New Passenger</li>
+      <li class="mdl-menu__item"><%= link_to "New Driver", new_driver_path %></li>
+      <li class="mdl-menu__item"><%= link_to "New Passenger", new_passenger_path %></li>
     </ul>
     <%= yield %>
   </body>
