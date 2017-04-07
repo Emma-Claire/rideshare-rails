@@ -1,4 +1,3 @@
-require 'csv'
 
 class DriversController < ApplicationController
 
@@ -30,7 +29,7 @@ class DriversController < ApplicationController
 
   def create
     Driver.create(user_params)
-    
+
     redirect_to drivers_path
   end
 

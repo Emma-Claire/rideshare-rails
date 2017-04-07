@@ -40,7 +40,7 @@ class PassengersController < ApplicationController
 
   private
   def user_params
-    params.require(:passenger).permit(:rider_id, :name, :phone_num)
+    params.require(:passenger).permit(:id, :name, :phone_num)
   end
 
 end
