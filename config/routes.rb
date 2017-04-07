@@ -19,4 +19,22 @@ Rails.application.routes.draw do
 
   delete '/drivers/:id', to: 'drivers#destroy'
 
+
+
+  get '/passengers', to: 'passengers#index', as: 'passengers'
+
+  get '/passengers/new', to: 'passengers#new', as: 'new_passenger'
+
+  post '/passengers', to: 'passengers#create'
+
+  get '/passengers/:id', to: 'passengers#show', as: 'passenger'
+
+  get '/passengers/:id/edit', to: 'passengers#edit', as: 'edit_passenger'
+
+  patch '/passengers/:id', to: 'passengers#update'
+
+  put '/passengers/:id', to: 'passengers#update'
+
+  delete '/passengers/:id', to: 'passengers#destroy'
+
 end

@@ -1,0 +1,6 @@
+<%= form_for @passenger do |f| %>
+  Passenger ID: <%= f.text_field :id %><br />
+  Passenger name: <%= f.text_field :name %><br />
+  Passenger phone number: <%= f.text_field :phone_num %><br />
+  <%= f.submit %>
+<% end %>
