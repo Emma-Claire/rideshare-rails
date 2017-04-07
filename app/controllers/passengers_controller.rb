@@ -38,6 +38,10 @@ class PassengersController < ApplicationController
     redirect_to passengers_path
   end
 
+  def trips
+    @trips = Passenger.find(params[:id]).trips
+  end
+
   private
   def user_params
     params.require(:passenger).permit(:id, :name, :phone_num)
