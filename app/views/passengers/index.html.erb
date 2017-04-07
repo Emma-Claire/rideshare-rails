@@ -1,7 +1,7 @@
 <body>
   <h1>Passengers' List</h1>
   <button class="mdl-button mdl-js-button mdl-button--raised">
-    <%= link_to "new passenger", new_passenger_path %>
+    <%= link_to "Add new passenger", new_passenger_path %>
   </button>
 
   <section>
@@ -9,12 +9,13 @@
     <%= link_to passenger.id, passenger_path(passenger.id) %>
     <%= "Passenger ID: #{passenger[:id]} Name: #{passenger[:name]} Phone number: #{passenger[:phone_num]}"%>
     <%= link_to "Edit", edit_passenger_path(passenger) %>
-    <%= link_to "Delete", passenger_path(passenger), method: :delete, data: {confirm: "Are you sure?"} %></br>
+    <%= link_to "Delete", passenger_path(passenger), method: :delete, data: {confirm: "Are you sure?"} %>
+  <%= link_to "Trips", passenger_trips_path(passenger) %></br>
   <% end %>
   </section>
 
   </br>
   <button class="mdl-button mdl-js-button mdl-button--raised">
-    <%= link_to "new passenger", new_passenger_path %>
+    <%= link_to "Add new passenger", new_passenger_path %>
   </button>
 </body>
