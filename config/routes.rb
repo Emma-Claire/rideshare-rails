@@ -37,6 +37,7 @@ Rails.application.routes.draw do
 
   delete '/passengers/:id', to: 'passengers#destroy'
 
+  get '/passengers/:id/trips', to: 'passengers#trips', as: 'passenger_trips'
 
 
   get '/trips', to: 'trips#index', as: 'trips'
@@ -54,4 +55,5 @@ Rails.application.routes.draw do
   put '/trips/:id', to: 'trips#update'
 
   delete '/trips/:id', to: 'trips#destroy'
+
 end
