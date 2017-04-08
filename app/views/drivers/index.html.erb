@@ -6,10 +6,10 @@
 
   <section>
     <% @drivers.each do |driver| %>
-    <%= link_to driver.id, driver_path(driver.id) %>
-    <%= "Driver ID: #{driver[:id]} Name: #{driver[:name]}"%>
-    <%= link_to "Edit", edit_driver_path(driver) %>
-    <%= link_to "Delete", driver_path(driver), method: :delete, data: {confirm: "Are you sure?"} %></br>
+    <%= link_to driver.name, driver_path(driver.id) %>
+    <!-- <%= "Driver ID: #{driver[:id]} Name: #{driver[:name]}"%> -->
+    <%= link_to "✏️", edit_driver_path(driver) %>
+    <%= link_to "🗑", driver_path(driver), method: :delete, data: {confirm: "Are you sure?"} %></br>
   <% end %>
   </section>
 
