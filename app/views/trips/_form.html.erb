@@ -1,0 +1,26 @@
+<%= form_for @trip do |f| %>
+  <ul class="demo-list-item mdl-list">
+    <li class="mdl-list__item">
+      <span class="mdl-list__item-primary-content">
+        Trip ID: <%= f.text_field :id %>
+      </span>
+    </li>
+    <li class="mdl-list__item">
+      <span class="mdl-list__item-primary-content">
+         Driver ID: <%= f.text_field :driver_id %>
+      </span>
+    </li>
+    <li class="mdl-list__item">
+      <span class="mdl-list__item-primary-content">
+        Date: <%= f.text_field :date %>
+      </span>
+    </li>
+    <li class="mdl-list__item">
+      <span class="mdl-list__item-primary-content">
+        Rating: <%= f.text_field :rating %>
+      </span>
+    </li>
+  </ul>
+
+  <%= f.submit class: "mdl-button mdl-js-button mdl-button--raised mdl-button--colored" %>
+<% end %>
