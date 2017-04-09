@@ -1,6 +1,6 @@
 <%= form_for @driver do |f| %>
   Driver ID: <%= f.text_field :id %><br />
   Driver name: <%= f.text_field :name %><br />
-  Driver VIN: <%= f.text_field :vin %><br />
-  <%= f.submit %>
+  Driver VIN: <%= f.text_field :vin %><br /><br />
+  <%= f.submit class: "mdl-button mdl-js-button mdl-button--raised mdl-button--colored"%>
 <% end %>

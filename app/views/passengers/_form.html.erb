@@ -1,6 +1,6 @@
 <%= form_for @passenger do |f| %>
   Passenger ID: <%= f.text_field :id %><br />
   Passenger name: <%= f.text_field :name %><br />
-  Passenger phone number: <%= f.text_field :phone_num %><br />
-  <%= f.submit %>
+  Passenger phone number: <%= f.text_field :phone_num %><br /><br />
+  <%= f.submit class: "mdl-button mdl-js-button mdl-button--raised mdl-button--colored" %>
 <% end %>
