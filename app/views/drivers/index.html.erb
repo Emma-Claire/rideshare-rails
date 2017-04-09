@@ -1,4 +1,4 @@
-<h1>Drivers' List</h1>
+<h2>Drivers' List</h2>
 <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent">
   <%= link_to "Add new driver", new_driver_path, class: 'white'%>
 </button>
@@ -7,8 +7,7 @@
   <thead>
     <tr>
       <th class="mdl-data-table__cell--non-numeric">Name</th>
-      <th>Edit</th>
-      <th>Delete</th>
+      <th> </th>
     </tr>
   </thead>
   <tbody>
@@ -17,8 +16,7 @@
       <td class="mdl-data-table__cell--non-numeric">
         <%= link_to driver.name, driver_path(driver.id) %>
       </td>
-      <td><%= link_to " ✏️", edit_driver_path(driver) %></td>
-      <td><%= link_to "🗑", driver_path(driver), method: :delete, data: {confirm: "Are you sure?"} %></td>
+      <td><%= link_to "✏️", edit_driver_path(driver) %> <%= link_to " 🗑", driver_path(driver), method: :delete, data: {confirm: "Are you sure?"} %></td>
     </tr>
     <% end %>
   </tbody>

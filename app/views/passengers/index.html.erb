@@ -1,4 +1,4 @@
-<h1>Passengers' List</h1>
+<h2>Passengers' List</h2>
 <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent">
   <%= link_to "Add new passenger", new_passenger_path, class: 'white' %>
 </button>
@@ -18,8 +18,7 @@
       <td class="mdl-data-table__cell--non-numeric">
         <%= link_to passenger.name, passenger_path(passenger.id) %>
       </td>
-      <td><%= link_to "✏️", edit_passenger_path(passenger) %></td>
-      <td><%= link_to "🗑", passenger_path(passenger), method: :delete, data: {confirm: "Are you sure?"} %></td>
+      <td><%= link_to "✏️", edit_passenger_path(passenger) %> <%= link_to "🗑", passenger_path(passenger), method: :delete, data: {confirm: "Are you sure?"} %></td>
       <td><%= link_to "see trips", passenger_trips_path(passenger) %></td>
     </tr>
     <% end %>
