@@ -1,7 +1,6 @@
 <h2>Trips for <%= "#{@passenger.name}" %></h2>
 
 <ul>
-  Test
   <% @trips.each do |trip| %>
   <li>
     Trip ID: <%= trip.id %>
@@ -18,5 +17,6 @@
   <li>
     Rating: <%= trip.rating %>
   </li>
+</br>
   <% end %>
 </ul>
