@@ -1,33 +1,31 @@
-<body>
-  <h3>Passengers' List</h3>
-  <button class="mdl-button mdl-js-button mdl-button--raised">
-    <%= link_to "Add new passenger", new_passenger_path %>
-  </button>
+<h1>Passengers' List</h1>
+<button class="mdl-button mdl-js-button mdl-button--raised">
+  <%= link_to "Add new passenger", new_passenger_path %>
+</button>
 
-  <table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp">
-    <thead>
-      <tr>
-        <th class="mdl-data-table__cell--non-numeric">Name</th>
-        <th>Edit</th>
-        <th>Delete</th>
-        <th>Trips</th>
-      </tr>
-    </thead>
-    <tbody>
-      <% @passengers.each do |passenger| %>
-      <tr>
-        <td class="mdl-data-table__cell--non-numeric">
-          <%= link_to passenger.name, passenger_path(passenger.id) %>
-        </td>
-        <td><%= link_to "✏️", edit_passenger_path(passenger) %></td>
-        <td><%= link_to "🗑", passenger_path(passenger), method: :delete, data: {confirm: "Are you sure?"} %></td>
-        <td><%= link_to "see trips", passenger_trips_path(passenger) %></td>
-      </tr>
-      <% end %>
-    </tbody>
-  </table>
+<table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp">
+  <thead>
+    <tr>
+      <th class="mdl-data-table__cell--non-numeric">Name</th>
+      <th>Edit</th>
+      <th>Delete</th>
+      <th>Trips</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @passengers.each do |passenger| %>
+    <tr>
+      <td class="mdl-data-table__cell--non-numeric">
+        <%= link_to passenger.name, passenger_path(passenger.id) %>
+      </td>
+      <td><%= link_to "✏️", edit_passenger_path(passenger) %></td>
+      <td><%= link_to "🗑", passenger_path(passenger), method: :delete, data: {confirm: "Are you sure?"} %></td>
+      <td><%= link_to "see trips", passenger_trips_path(passenger) %></td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
 
-  <button class="mdl-button mdl-js-button mdl-button--raised">
-    <%= link_to "Add new passenger", new_passenger_path %>
-  </button>
-</body>
+<button class="mdl-button mdl-js-button mdl-button--raised">
+  <%= link_to "Add new passenger", new_passenger_path %>
+</button>

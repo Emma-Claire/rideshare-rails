@@ -1,33 +1,29 @@
-<body>
-  <main>
-    <h3>Drivers' List</h3>
-    <button class="mdl-button mdl-js-button mdl-button--raised">
-      <%= link_to "Add new driver", new_driver_path %>
-    </button>
+<h1>Drivers' List</h1>
+<button class="mdl-button mdl-js-button mdl-button--raised">
+  <%= link_to "Add new driver", new_driver_path %>
+</button>
 
-    <table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp">
-      <thead>
-        <tr>
-          <th class="mdl-data-table__cell--non-numeric">Name</th>
-          <th>Edit</th>
-          <th>Delete</th>
-        </tr>
-      </thead>
-      <tbody>
-        <% @drivers.each do |driver| %>
-        <tr>
-          <td class="mdl-data-table__cell--non-numeric">
-            <%= link_to driver.name, driver_path(driver.id) %>
-          </td>
-          <td><%= link_to " ✏️", edit_driver_path(driver) %></td>
-          <td><%= link_to "🗑", driver_path(driver), method: :delete, data: {confirm: "Are you sure?"} %></td>
-        </tr>
-        <% end %>
-      </tbody>
-    </table>
+<table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp">
+  <thead>
+    <tr>
+      <th class="mdl-data-table__cell--non-numeric">Name</th>
+      <th>Edit</th>
+      <th>Delete</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @drivers.each do |driver| %>
+    <tr>
+      <td class="mdl-data-table__cell--non-numeric">
+        <%= link_to driver.name, driver_path(driver.id) %>
+      </td>
+      <td><%= link_to " ✏️", edit_driver_path(driver) %></td>
+      <td><%= link_to "🗑", driver_path(driver), method: :delete, data: {confirm: "Are you sure?"} %></td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
 
-    <button class="mdl-button mdl-js-button mdl-button--raised">
-      <%= link_to "Add new driver", new_driver_path %>
-    </button>
-  </main>
-</body>
+<button class="mdl-button mdl-js-button mdl-button--raised">
+  <%= link_to "Add new driver", new_driver_path %>
+</button>
