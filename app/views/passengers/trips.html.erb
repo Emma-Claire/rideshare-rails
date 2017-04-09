@@ -1,22 +1,21 @@
 <h2>Trips for <%= "#{@passenger.name}" %></h2>
-<section>
-  <% @trips.each do |trip| %>
-    <ul>
-      <li>
-        Trip ID: <%= trip[:id] %>
-      </li>
-      <li>
-        Driver ID: <%= trip[:driver_id] %>
-      </li>
-      <li>
-        Rider ID: <%= trip[:rider_id] %>
-      </li>
-      <li>
-        Date: <%= trip[:date] %>
-      </li>
-      <li>
-        Rating: <%= trip[:rating] %>
-      </li>
-    </ul>
-  <% end %>
-</section>
+
+<% @trips.each do |trip| %>
+  <ul>
+    <li>
+      Trip ID: <%= trip[:id] %>
+    </li>
+    <li>
+      Driver ID: <%= trip[:driver_id] %>
+    </li>
+    <li>
+      Rider ID: <%= trip[:rider_id] %>
+    </li>
+    <li>
+      Date: <%= trip[:date] %>
+    </li>
+    <li>
+      Rating: <%= trip[:rating] %>
+    </li>
+  </ul>
+<% end %>
